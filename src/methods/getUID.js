@@ -12,5 +12,4 @@ const getUID = () => {
   });
   return UID;
 };
-
 export default getUID;

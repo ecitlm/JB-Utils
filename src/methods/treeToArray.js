@@ -20,5 +20,4 @@ const treeToArray = (treeData, field) => {
   }
   return result;
 };
-
 export default treeToArray;

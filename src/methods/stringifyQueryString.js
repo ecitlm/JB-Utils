@@ -21,5 +21,4 @@ const stringifyQueryString = obj => {
   }
   return pairs.join('&');
 };
-
 export default stringifyQueryString;
