@@ -36,5 +36,7 @@ getUID() // '103f4456-6c28-4449-89d1-a8ea7b20'
 | debounce()                 | 函数防抖                             |
 | throttle()                 | 函数节流                            |
 | IdCardInfo()               | 解析身份证信息                      |
-| Calc                       | 加减乘除
+| Calc                       | 加减乘除类
+| URL                        | URL对象化
+
 ### change log
