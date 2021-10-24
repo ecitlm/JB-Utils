@@ -3,6 +3,15 @@ import commonjs from '@rollup/plugin-commonjs';
 import { babel } from '@rollup/plugin-babel';
 import { terser } from 'rollup-plugin-terser';
 import pkg from './package.json';
+
+const comments = `/**
+* name: ${pkg.name}
+* description: ${pkg.description}
+* author: ${pkg.author}
+* website: https://ecitlm.github.io/JB-Utils/index.html
+* Date: ${new Date().toLocaleDateString()}
+**/
+`;
 export default {
   input: './src/index.js',
   output: [
@@ -32,7 +41,7 @@ export default {
         pure_funcs: ['console.log']
       },
       output: {
-        preamble: `/*! \n * name: ${pkg.name}  \n * author: ${pkg.author} \n * Date: ${new Date().toLocaleDateString()} \n * */`
+        preamble: comments
       }
     })
   ]
