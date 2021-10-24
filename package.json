@@ -1,0 +1,42 @@
+{
+  "name": "jb-utils",
+  "version": "1.0.0",
+  "description": "jb-utils前端常用方法库",
+  "main": "dist/index.cjs.js",
+  "module": "dist/index.esm.js",
+  "browser": "dist/index.umd.js",
+  "scripts": {
+    "build": "rollup --config rollup.config.js",
+    "dev": "rollup --config rollup.config.dev.js",
+    "doc": "jsdoc readme.md  -c jsdoc.conf.json"
+  },
+  "keywords": [
+    "utils",
+    "web-utils",
+    "js-utils",
+    "javascript-utils",
+    "前端业务工具库"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "homepage": "https://github.com/ecitlm/JB-Utils",
+  "author": "ecitlm",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.15.8",
+    "@babel/plugin-transform-runtime": "^7.15.8",
+    "@babel/preset-env": "^7.15.8",
+    "@rollup/plugin-babel": "^5.3.0",
+    "@rollup/plugin-commonjs": "^21.0.1",
+    "@rollup/plugin-node-resolve": "^13.0.6",
+    "@types/babel__core": "^7.1.9",
+    "eslint": "^6.8.0",
+    "jsdoc": "^3.6.7",
+    "rollup": "^2.58.0",
+    "rollup-plugin-livereload": "^2.0.5",
+    "rollup-plugin-serve": "^1.1.0",
+    "rollup-plugin-terser": "^7.0.2",
+    "typescript": "^4.4.4"
+  }
+}
