@@ -11,28 +11,15 @@ $ npm i --save jb-utils
 ```javascript
 // 全部引入
 import * as webUtils from 'jb-utils';
-webUtils.getUID();
+webUtils.getUID(); // '8814ff4a-72c0-4943-f5df-dc1736f0'
 
 //按需引入
 import { getUID } from 'jb-utils';
+getUID() // '103f4456-6c28-4449-89d1-a8ea7b20'
 
 ```
 
 ### 方法
-
-```
-getTreeChildren, 
-getUID, 
-treeToArray,
-treeToArray,
-parseQueryString, 
-stringifyQueryString, 
-validator, 
-convertCurrency, 
-formatNumber
-Storage,
-debounce
-```
 
 | 方法                       | 说明                                 |
 | -------------------------- | ------------------------------------ |
@@ -47,7 +34,7 @@ debounce
 | formatNumber()             | 数字千分位                           |
 | Storage()                  | 浏览器缓存方法                       |
 | debounce()                 | 函数防抖                             |
-| throttle()                 |  函数节流                            |
-
-
+| throttle()                 | 函数节流                            |
+| IdCardInfo()               | 解析身份证信息                      |
+| Calc                       | 加减乘除
 ### change log

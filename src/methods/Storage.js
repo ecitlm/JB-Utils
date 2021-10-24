@@ -72,5 +72,4 @@ ls.bootStrap({
   time:5000
 });
 */
-
 export default Storage;

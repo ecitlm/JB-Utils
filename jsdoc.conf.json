@@ -16,6 +16,10 @@
     "monospaceLinks": false
   },
   "opts": {
-    "destination": "./docs/"
+    "template": "node_modules/docdash",
+    "encoding": "utf8",
+    "destination": "docs/",
+    "recurse": true,
+    "verbose": true
   }
 }

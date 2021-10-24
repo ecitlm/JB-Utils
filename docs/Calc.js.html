@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <meta charset="utf-8">
+    <title>Calc.js - Documentation</title>
+    
+    
+    <script src="scripts/prettify/prettify.js"></script>
+    <script src="scripts/prettify/lang-css.js"></script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc.css">
+    <script src="scripts/nav.js" defer></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+
+<input type="checkbox" id="nav-trigger" class="nav-trigger" />
+<label for="nav-trigger" class="navicon-button x">
+  <div class="navicon"></div>
+</label>
+
+<label for="nav-trigger" class="overlay"></label>
+
+<nav >
+    
+    <h2><a href="index.html">Home</a></h2><h3>Classes</h3><ul><li><a href="Calc.html">Calc</a><ul class='methods'><li data-type='method'><a href="Calc.html#add">add</a></li><li data-type='method'><a href="Calc.html#exc">exc</a></li><li data-type='method'><a href="Calc.html#ride">ride</a></li><li data-type='method'><a href="Calc.html#sub">sub</a></li></ul></li><li><a href="Storage.html">Storage</a><ul class='methods'><li data-type='method'><a href="Storage.html#bootStrap">bootStrap</a></li><li data-type='method'><a href="Storage.html#clear">clear</a></li><li data-type='method'><a href="Storage.html#getItem">getItem</a></li><li data-type='method'><a href="Storage.html#removeItem">removeItem</a></li><li data-type='method'><a href="Storage.html#setItem">setItem</a></li></ul></li><li><a href="Validator.html">Validator</a></li></ul><h3>Global</h3><ul><li><a href="global.html#arrayToTree">arrayToTree</a></li><li><a href="global.html#convertCurrency">convertCurrency</a></li><li><a href="global.html#debounce">debounce</a></li><li><a href="global.html#formatNumber">formatNumber</a></li><li><a href="global.html#getTreeChildren">getTreeChildren</a></li><li><a href="global.html#getUID">getUID</a></li><li><a href="global.html#IdCardInfo">IdCardInfo</a></li><li><a href="global.html#parseQueryString">parseQueryString</a></li><li><a href="global.html#stringifyQueryString">stringifyQueryString</a></li><li><a href="global.html#throttle">throttle</a></li><li><a href="global.html#treeToArray">treeToArray</a></li><li><a href="global.html#URL">URL</a></li></ul>
+</nav>
+
+<div id="main">
+    
+    <h1 class="page-title">Calc.js</h1>
+    
+
+    
+
+
+
+    
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>/**
+ * @description 加减乘除类
+ * @return: {}
+ */
+class Calc{
+  constructor() {
+  }
+  /**
+   * @description 加法
+   * @param args
+   */
+  add(...args) {
+    let sum = 0;
+    let tmp = [];
+    for (let val of args) {
+      tmp.push(...String(val).split('.'));
+    }
+    let arr = tmp.map(item => {
+      return item.length;
+    });
+    let max = Math.max(...arr);
+
+    for (let i = 0; i &lt; args.length; i++) {
+      sum += Math.round(args[i] * Math.pow(10, max));
+    }
+    return sum / Math.pow(10, max);
+  }
+  /**
+   * @description 减法
+   * @param args
+   */
+  sub(...args) {
+    let max = 0;
+    let count = args[0] | 0;
+    for (let i = 0; i &lt; args.length; i++) {
+      const strVal = args[i].toString();
+      const index = strVal.indexOf('.');
+      let num = 0;
+      if (index > -1) {
+        num = strVal.length - 1 - index;
+        max = num > max ? num : max;
+      }
+    }
+    for (let i = 0; i &lt; args.length; i++) {
+      if (i === 0) {
+        count = Math.round(args[i] * Math.pow(10, max));
+      } else {
+        count -= Math.round(args[i] * Math.pow(10, max));
+      }
+    }
+    return count / Math.pow(10, max);
+  }
+  /**
+   * @description 乘法
+   * @param args
+   */
+  ride(...args) {
+    const strVal = args[0].toString();
+    const strValTwo = args[1].toString();
+    const index = strVal.indexOf('.');
+    const indexTwo = strValTwo.indexOf('.');
+    const num = [0, 0];
+    if (index > -1) {
+      num[0] = strVal.length - 1 - index;
+    }
+    if (indexTwo > -1) {
+      num[1] = strValTwo.length - 1 - index;
+    }
+    return (
+      Math.round(args[0] * Math.pow(10, num[0]) * (args[1] * Math.pow(10, num[1]))) /
+      Math.pow(10, num[0] + num[1])
+    );
+  }
+  /**
+   * @description 除法
+   * @param args
+   * @param valTwo
+   */
+  exc(args, valTwo = 100) {
+    const strVal = args.toString();
+    const strValTwo = valTwo.toString();
+    const index = strVal.indexOf('.');
+    const indexTwo = strValTwo.indexOf('.');
+    const num = [0, 0];
+    if (index > -1) {
+      num[0] = strVal.length - 1 - index;
+    }
+    if (indexTwo > -1) {
+      num[1] = strValTwo.length - 1 - index;
+    }
+    return (
+      Math.round(args * Math.pow(10, num[0])) /
+      (Math.round(valTwo * Math.pow(10, num[1])) * Math.pow(10, num[0] - num[1]))
+    );
+  }
+}
+
+export default Calc;
+</code></pre>
+        </article>
+    </section>
+
+
+
+
+    
+    
+</div>
+
+<br class="clear">
+
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.6.7</a> on Sun Oct 24 2021 15:11:52 GMT+0800 (GMT+08:00) using the <a href="https://github.com/clenemt/docdash">docdash</a> theme.
+</footer>
+
+<script>prettyPrint();</script>
+<script src="scripts/polyfill.js"></script>
+<script src="scripts/linenumber.js"></script>
+
+
+
+</body>
+</html>

@@ -14,5 +14,4 @@ const debounce = (fn, delay = 500) => {
     }, delay);
   };
 };
-
 export default debounce;

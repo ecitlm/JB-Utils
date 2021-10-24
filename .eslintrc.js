@@ -22,7 +22,7 @@ module.exports = {
     'array-bracket-spacing': ['error', 'never'],
     'object-curly-spacing': ['error', 'always'],
     'key-spacing': [0, { beforeColon: false, afterColon: true }],
-    'arrow-parens': ['error', 'as-needed']
+    'arrow-parens': ['error', 'as-needed'],
     // 'space-in-brackets': ['error', 'always']
   }
 };

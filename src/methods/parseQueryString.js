@@ -9,7 +9,10 @@ const parseQueryString = url => {
   if (!search) {
     return {};
   }
-  return JSON.parse('{"' + decodeURIComponent(search).replace(/"/g, '\\"').replace(/&/g, '","').replace(/=/g, '":"') + '"}');
+  return JSON.parse(
+    '{"' +
+      decodeURIComponent(search).replace(/"/g, '\\"').replace(/&/g, '","').replace(/=/g, '":"') +
+      '"}'
+  );
 };
-
 export default parseQueryString;
