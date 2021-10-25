@@ -19,6 +19,10 @@ getUID() // '103f4456-6c28-4449-89d1-a8ea7b20'
 
 ```
 
+[在线文档](https://ecitlm.github.io/JB-Utils/)
+
+gitHub： https://github.com/ecitlm/JB-Utils
+
 ### 方法
 
 | 方法                       | 说明                                 |

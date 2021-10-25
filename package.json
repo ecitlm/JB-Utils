@@ -6,9 +6,9 @@
   "module": "dist/index.esm.js",
   "browser": "dist/index.umd.js",
   "scripts": {
-    "build": "rollup --config rollup.config.js",
+    "build": "rimraf dist && rollup --config rollup.config.js",
     "dev": "rollup --config rollup.config.dev.js",
-    "doc": "jsdoc readme.md  -c jsdoc.conf.json"
+    "doc": "rimraf docs && jsdoc readme.md  -c jsdoc.conf.json"
   },
   "keywords": [
     "utils",
@@ -34,8 +34,10 @@
     "docdash": "^1.2.0",
     "docdash-blue": "^1.1.8",
     "eslint": "^6.8.0",
+    "glob": "^7.2.0",
     "jsdoc": "^3.6.7",
     "prettier": "^2.4.1",
+    "rimraf": "^3.0.2",
     "rollup": "^2.58.0",
     "rollup-plugin-livereload": "^2.0.5",
     "rollup-plugin-serve": "^1.1.0",

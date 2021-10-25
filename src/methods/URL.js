@@ -13,7 +13,7 @@ const URL = urlStr => {
     parseUrl.params = parseQueryString(url);
     return parseUrl;
   } catch (e) {
-    throw new Error('URL无效');
+    throw new Error('URL INVALID');
   }
 };
 export default URL;

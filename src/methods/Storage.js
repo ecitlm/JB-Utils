@@ -21,7 +21,7 @@ class Storage {
       this.readStorage = window.localStorage;
       break;
     default:
-      throw new Error('当前配置的mode未再配置区内，可以检查传入配置。');
+      throw new Error('arguments is wrong,please check config {}');
     }
     this.config = config;
   }
@@ -36,7 +36,7 @@ class Storage {
     try {
       this.readStorage.setItem(key, JSON.stringify(value));
     }catch (e) {
-      throw new Error('需要存储的data不支持JSON.stringify方法，请检查当前数据');
+      throw new Error('value is not a JSON.stringify val，please check data value');
     }
   }
 
