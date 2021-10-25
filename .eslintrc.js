@@ -13,12 +13,11 @@ module.exports = {
     sourceType: 'module'
   },
   rules: {
-    "no-var":'error',//禁用var，用let和const代替
+    "no-var":'error',
     indent: ['error', 2],
-    'linebreak-style': ['error', 'windows'],
+    // 'linebreak-style': ['error', 'windows'],
     quotes: ['error', 'single'],
     semi: ['error', 'always'],
-    // 'space-before-function-paren': ['error', 'always'],
     'array-bracket-spacing': ['error', 'never'],
     'object-curly-spacing': ['error', 'always'],
     'key-spacing': [0, { beforeColon: false, afterColon: true }],
