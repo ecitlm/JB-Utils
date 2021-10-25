@@ -3,7 +3,7 @@
 <head>
     
     <meta charset="utf-8">
-    <title>Validator.js - Documentation</title>
+    <title>Home - Documentation</title>
     
     
     <script src="scripts/prettify/prettify.js"></script>
@@ -32,46 +32,126 @@
 
 <div id="main">
     
-    <h1 class="page-title">Validator.js</h1>
-    
 
     
 
 
 
     
-    <section>
-        <article>
-            <pre class="prettyprint source linenums"><code>/**
- * @description 表单验证类
- * @class Validator
- */
-const regx = {
-  phone: /^1[3|4|5|7|8][0-9]{9}$/,
-  email: /^[\w-]+(\.[\w-]+)*@[\w-]+(\.[\w-]+)+$/,
-  tel: /^(0\d{2,3}-\d{7,8})(-\d{1,4})?$/,
-  number: /^[0-9]$/,
-  chinese: /^[\u4E00-\u9FA5]+$/,
-  english: /^[a-zA-Z]+$/,
-  lower: /^[a-z]+$/,
-  url: /^(?:(?:https?|ftp):\/\/)?(?:(?!(?:10|127)(?:\.\d{1,3}){3})(?!(?:169\.254|192\.168)(?:\.\d{1,3}){2})(?!172\.(?:1[6-9]|2\d|3[0-1])(?:\.\d{1,3}){2})(?:[1-9]\d?|1\d\d|2[01]\d|22[0-3])(?:\.(?:1?\d{1,2}|2[0-4]\d|25[0-5])){2}(?:\.(?:[1-9]\d?|1\d\d|2[0-4]\d|25[0-4]))|(?:(?:[a-z\u00a1-\uffff0-9]-*)*[a-z\u00a1-\uffff0-9]+)(?:\.(?:[a-z\u00a1-\uffff0-9]-*)*[a-z\u00a1-\uffff0-9]+)*(?:\.(?:[a-z\u00a1-\uffff]{2,})))(?::\d{2,5})?(?:\/\S*)?$/i,
-  idCard: /^[1-9]\d{5}(?:18|19|20)\d{2}(?:0[1-9]|10|11|12)(?:0[1-9]|[1-2]\d|30|31)\d{3}[\dXx]$/
-};
-class Validator {
-  constructor(reg = {}) {
-    const r = { ...regx, ...reg };
-    Object.keys(r).forEach(item => {
-      this[item] = (str = '') => {
-        return regx[item].test(str);
-      };
-    });
-  }
-}
 
-export default Validator;
-</code></pre>
-        </article>
+
+    <section class="package">
+        <h3> </h3>		
     </section>
+
+
+
+
+
+
+
+
+
+    
+
+
+
+    <section class="readme usertext">
+        <article><h1>jb-utils</h1>
+<blockquote>
+<p><code>JavaScript Business utils</code> 前端常用项目业务工具库</p>
+</blockquote>
+<h3>Installation</h3>
+<p>Using npm:</p>
+<pre class="prettyprint source lang-shell"><code>$ npm i --save jb-utils
+</code></pre>
+<h3>how to use</h3>
+<pre class="prettyprint source lang-javascript"><code>// 全部引入
+import * as webUtils from 'jb-utils';
+webUtils.getUID(); // '8814ff4a-72c0-4943-f5df-dc1736f0'
+
+//按需引入
+import { getUID } from 'jb-utils';
+getUID() // '103f4456-6c28-4449-89d1-a8ea7b20'
+
+</code></pre>
+<p><a href="https://ecitlm.github.io/JB-Utils/">在线文档</a></p>
+<p>gitHub： https://github.com/ecitlm/JB-Utils</p>
+<h3>方法</h3>
+<table>
+<thead>
+<tr>
+<th>方法</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>getTreeChildren ()</td>
+<td>获取树的子节点</td>
+</tr>
+<tr>
+<td>getUID ()</td>
+<td>生成唯一UUID</td>
+</tr>
+<tr>
+<td>treeToArray ()</td>
+<td>树扁平化树</td>
+</tr>
+<tr>
+<td>arrayToTree()</td>
+<td>数组转树结构</td>
+</tr>
+<tr>
+<td>parseQueryString ()</td>
+<td>url参数转对象</td>
+</tr>
+<tr>
+<td>stringifyQueryString ()</td>
+<td>对象序列化</td>
+</tr>
+<tr>
+<td>Validator ()</td>
+<td>表单校验</td>
+</tr>
+<tr>
+<td>convertCurrency()</td>
+<td>数字金额转大写</td>
+</tr>
+<tr>
+<td>formatNumber()</td>
+<td>数字千分位</td>
+</tr>
+<tr>
+<td>Storage()</td>
+<td>浏览器缓存方法</td>
+</tr>
+<tr>
+<td>debounce()</td>
+<td>函数防抖</td>
+</tr>
+<tr>
+<td>throttle()</td>
+<td>函数节流</td>
+</tr>
+<tr>
+<td>IdCardInfo()</td>
+<td>解析身份证信息</td>
+</tr>
+<tr>
+<td>Calc</td>
+<td>加减乘除类</td>
+</tr>
+<tr>
+<td>URL</td>
+<td>URL对象化</td>
+</tr>
+</tbody>
+</table>
+<h3>change log</h3></article>
+    </section>
+
+
 
 
 

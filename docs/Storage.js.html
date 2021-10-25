@@ -3,7 +3,7 @@
 <head>
     
     <meta charset="utf-8">
-    <title>Validator.js - Documentation</title>
+    <title>Storage.js - Documentation</title>
     
     
     <script src="scripts/prettify/prettify.js"></script>
@@ -32,7 +32,7 @@
 
 <div id="main">
     
-    <h1 class="page-title">Validator.js</h1>
+    <h1 class="page-title">Storage.js</h1>
     
 
     
@@ -43,32 +43,80 @@
     <section>
         <article>
             <pre class="prettyprint source linenums"><code>/**
- * @description 表单验证类
- * @class Validator
+ * @description 浏览器缓存类
+ * @class Storage
  */
-const regx = {
-  phone: /^1[3|4|5|7|8][0-9]{9}$/,
-  email: /^[\w-]+(\.[\w-]+)*@[\w-]+(\.[\w-]+)+$/,
-  tel: /^(0\d{2,3}-\d{7,8})(-\d{1,4})?$/,
-  number: /^[0-9]$/,
-  chinese: /^[\u4E00-\u9FA5]+$/,
-  english: /^[a-zA-Z]+$/,
-  lower: /^[a-z]+$/,
-  url: /^(?:(?:https?|ftp):\/\/)?(?:(?!(?:10|127)(?:\.\d{1,3}){3})(?!(?:169\.254|192\.168)(?:\.\d{1,3}){2})(?!172\.(?:1[6-9]|2\d|3[0-1])(?:\.\d{1,3}){2})(?:[1-9]\d?|1\d\d|2[01]\d|22[0-3])(?:\.(?:1?\d{1,2}|2[0-4]\d|25[0-5])){2}(?:\.(?:[1-9]\d?|1\d\d|2[0-4]\d|25[0-4]))|(?:(?:[a-z\u00a1-\uffff0-9]-*)*[a-z\u00a1-\uffff0-9]+)(?:\.(?:[a-z\u00a1-\uffff0-9]-*)*[a-z\u00a1-\uffff0-9]+)*(?:\.(?:[a-z\u00a1-\uffff]{2,})))(?::\d{2,5})?(?:\/\S*)?$/i,
-  idCard: /^[1-9]\d{5}(?:18|19|20)\d{2}(?:0[1-9]|10|11|12)(?:0[1-9]|[1-2]\d|30|31)\d{3}[\dXx]$/
-};
-class Validator {
-  constructor(reg = {}) {
-    const r = { ...regx, ...reg };
-    Object.keys(r).forEach(item => {
-      this[item] = (str = '') => {
-        return regx[item].test(str);
-      };
-    });
+class Storage {
+  constructor() {
+    if(window &amp;&amp; window.localStorage){
+      this.readStorage = window.localStorage;
+    }
+  }
+  /**
+   * 初始化Storage的数据
+   * @param config {Object} {}
+   */
+  bootStrap(config) {
+    switch (config.mode) {
+    case 'session':
+      this.readStorage = window.sessionStorage;
+      break;
+    case 'local':
+      this.readStorage = window.localStorage;
+      break;
+    default:
+      throw new Error('arguments is wrong,please check config {}');
+    }
+    this.config = config;
+  }
+
+  /**
+   * 设置缓存 setItem
+   * @param key key
+   * @param value value
+   */
+  setItem(key,value){
+    if(arguments.length !== 2) throw new Error('args must be two');
+    try {
+      this.readStorage.setItem(key, JSON.stringify(value));
+    }catch (e) {
+      throw new Error('value is not a JSON.stringify val，please check data value');
+    }
+  }
+
+  /**
+   * 获取缓存 getItem
+   * @param key {string} 缓存key
+   * @returns {*|null}
+   */
+  getItem(key){
+    const content = JSON.parse(this.readStorage.getItem(key));
+    return (content === null || content === void 0 ? void 0 : content.data) || null;
+  }
+
+  /**
+   * 移除缓存 removeItem
+   * @param key {string} 缓存key
+   */
+  removeItem(key) {
+    this.readStorage.removeItem(key);
+  }
+
+  /**
+   * clear清除缓存
+   */
+  clear(){
+    this.readStorage.clear();
   }
 }
-
-export default Validator;
+/*
+let ls = new Storage();
+ls.bootStrap({
+  mode:'local',
+  time:5000
+});
+*/
+export default Storage;
 </code></pre>
         </article>
     </section>
