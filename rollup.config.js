@@ -3,10 +3,12 @@ import commonjs from '@rollup/plugin-commonjs';
 import { babel } from '@rollup/plugin-babel';
 import { terser } from 'rollup-plugin-terser';
 import glob from 'glob';
+import json from '@rollup/plugin-json';
 import pkg from './package.json';
 
 const comments = `/**
 * name: ${pkg.name}
+* version ${pkg.version}
 * description: ${pkg.description}
 * author: ${pkg.author}
 * website: https://ecitlm.github.io/JB-Utils/index.html
@@ -23,6 +25,7 @@ const plugins = [
     exclude: 'node_modules/**',
     babelHelpers: 'runtime'
   }),
+  json(),
   resolve(), // 查找和打包node_modules中的第三方模块
   commonjs(), // 将 CommonJS 转换成 ES2015 模块供 Rollup 处理
   terser({
