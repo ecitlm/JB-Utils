@@ -3,6 +3,7 @@
  * @date: 2021/10/23
  * @return: {}
  */
+
 import getUID from './methods/getUID';
 import getTreeChildren from './methods/getTreeChildren';
 import treeToArray from './methods/treeToArray';
@@ -16,6 +17,9 @@ import arrayToTree from './methods/arrayToTree';
 import URL from './methods/URL';
 import IdCardInfo from './methods/IdCardInfo';
 import Calc from './methods/Calc';
+import debounce from './methods/debounce';
+import throttle from './methods/throttle';
+import { version } from '../package.json';
 export {
   getTreeChildren,
   getUID,
@@ -29,5 +33,8 @@ export {
   arrayToTree,
   URL,
   IdCardInfo,
-  Calc
+  Calc,
+  throttle,
+  debounce,
+  version
 };
