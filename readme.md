@@ -41,6 +41,5 @@ gitHub： https://github.com/ecitlm/JB-Utils
 | throttle()                 | 函数节流                            |
 | IdCardInfo()               | 解析身份证信息                      |
 | Calc                       | 加减乘除类
-| URL                        | URL对象化
 
 ### change log
