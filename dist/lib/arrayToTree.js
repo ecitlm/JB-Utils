@@ -1,6 +1,6 @@
 /**
 * name: jb-utils
-* version 1.1.0
+* version 1.1.1
 * description: jb-utils前端常用方法库
 * author: ecitlm
 * website: https://ecitlm.github.io/JB-Utils/index.html
