@@ -14,7 +14,6 @@ import convertCurrency from './methods/convertCurrency';
 import formatNumber from './methods/formatNumber';
 import Storage from './methods/Storage';
 import arrayToTree from './methods/arrayToTree';
-import URL from './methods/URL';
 import IdCardInfo from './methods/IdCardInfo';
 import Calc from './methods/Calc';
 import debounce from './methods/debounce';
@@ -31,7 +30,6 @@ export {
   formatNumber,
   Storage,
   arrayToTree,
-  URL,
   IdCardInfo,
   Calc,
   throttle,

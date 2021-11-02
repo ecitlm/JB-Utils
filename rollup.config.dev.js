@@ -3,6 +3,7 @@ import commonjs from '@rollup/plugin-commonjs';
 import { babel } from '@rollup/plugin-babel';
 import serve from 'rollup-plugin-serve';
 import livereload from 'rollup-plugin-livereload';
+import json from '@rollup/plugin-json';
 export default {
   input: './src/index.js', // 打包入口
   output: {
@@ -17,6 +18,7 @@ export default {
       exclude: 'node_modules/**', // 防止打包node_modules下的文件
       babelHelpers: 'runtime'
     }),
+    json(),
     resolve(), // 查找和打包node_modules中的第三方模块
     commonjs(), // 将 CommonJS 转换成 ES2015 模块供 Rollup 处理
     // 热更新 默认监听根文件夹

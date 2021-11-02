@@ -2,7 +2,7 @@
  * @description 加减乘除类
  * @return: {}
  */
-class Calc{
+class Calc {
   constructor() {
   }
   /**
@@ -15,6 +15,7 @@ class Calc{
     for (let val of args) {
       tmp.push(...String(val).split('.'));
     }
+
     let arr = tmp.map(item => {
       return item.length;
     });

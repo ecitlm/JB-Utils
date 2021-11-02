@@ -4,8 +4,8 @@
  * @return {Object}
  */
 const parseQueryString = url => {
-  url = url == null ? window.location.href : url;
-  const search = url.substring(url.lastIndexOf('?') + 1);
+  let str = url ||  window.location.href;
+  const search = url.split('?')[1];
   if (!search) {
     return {};
   }
@@ -15,4 +15,5 @@ const parseQueryString = url => {
       '"}'
   );
 };
+
 export default parseQueryString;
