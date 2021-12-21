@@ -3,12 +3,7 @@
  * @return: {}
  */
 class Calc {
-  constructor() {
-  }
-  /**
-   * @description 加法
-   * @param args
-   */
+  constructor() {}
   add(...args) {
     let sum = 0;
     let tmp = [];
@@ -93,6 +88,16 @@ class Calc {
       Math.round(args * Math.pow(10, num[0])) /
       (Math.round(valTwo * Math.pow(10, num[1])) * Math.pow(10, num[0] - num[1]))
     );
+  }
+  /**
+   * 精度四舍五入
+   * @param {*} num 数字
+   * @param {*} precision 位数
+   * @returns
+   */
+  toFixed(num, precision) {
+    let power = Math.pow(10, precision);
+    return (Math.round(num * power) / power).toFixed(precision);
   }
 }
 

@@ -18,7 +18,10 @@ import IdCardInfo from './methods/IdCardInfo';
 import Calc from './methods/Calc';
 import debounce from './methods/debounce';
 import throttle from './methods/throttle';
+import  unique  from './methods/unique';
+import  formatDate  from './methods/formatDate';
 import { version } from '../package.json';
+
 export {
   getTreeChildren,
   getUID,
@@ -34,5 +37,7 @@ export {
   Calc,
   throttle,
   debounce,
+  unique,
+  formatDate,
   version
 };
