@@ -16,10 +16,16 @@
     "monospaceLinks": false
   },
   "opts": {
-    "template": "node_modules/docdash",
+    "template": "template",
     "encoding": "utf8",
     "destination": "docs/",
     "recurse": true,
     "verbose": true
+  },
+  "docdash": {
+    "meta": {
+      "title": "工具类库"
+    },
+    "search": false
   }
 }

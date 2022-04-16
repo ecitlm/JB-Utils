@@ -5,10 +5,10 @@ import serve from 'rollup-plugin-serve';
 import livereload from 'rollup-plugin-livereload';
 import json from '@rollup/plugin-json';
 export default {
-  input: './src/index.js', // 打包入口
+  input: './src/index.ts', // 打包入口
   output: {
     // 打包出口
-    file: 'dist/index.js', // 最终打包出来的文件路径和文件名
+    file: 'dist/index.ts', // 最终打包出来的文件路径和文件名
     format: 'umd', // umd是兼容amd/cjs/iife的通用打包格式，适合浏览器
     name: 'webUtils', //当format为iife和umd时必须提供，将作为全局变量挂在window(浏览器环境)下：window.A=
     sourcemap: true //生成bundle.map.js文件，方便调试

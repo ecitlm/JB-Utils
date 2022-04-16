@@ -21,6 +21,12 @@ webUtils.getUID(); // '8814ff4a-72c0-4943-f5df-dc1736f0'
 import { getUID } from 'jb-utils';
 getUID(); // '103f4456-6c28-4449-89d1-a8ea7b20'
 ```
+### 浏览器中引入
+> 全局暴露 webUtils
+```html
+<script type="text/javascript" src="https://unpkg.com/jb-utils@1.1.2/dist/index.umd.js"></script>
+```
+
 
 [在线文档](https://ecitlm.github.io/JB-Utils/)
 

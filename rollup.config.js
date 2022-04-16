@@ -1,4 +1,5 @@
 import resolve from '@rollup/plugin-node-resolve';
+import typescript from 'rollup-plugin-typescript2';
 import commonjs from '@rollup/plugin-commonjs';
 import { babel } from '@rollup/plugin-babel';
 import { terser } from 'rollup-plugin-terser';
@@ -21,6 +22,10 @@ const comments = `/**
  * @type {Plugin[]}
  */
 const plugins = [
+  typescript({
+    useTsconfigDeclarationDir:true,
+    tsconfigOverride:true
+  }),
   babel({
     exclude: 'node_modules/**',
     babelHelpers: 'runtime'
@@ -58,11 +63,11 @@ function getEntriesJs(path) {
   });
   return entryList;
 }
-const entryJS = getEntriesJs('src/methods/*.js');
+const entryJS = getEntriesJs('src/methods/*.ts');
 
 export default [
   {
-    input: './src/index.js',
+    input: './src/index.ts',
     output: [
       {
         file: pkg.browser,

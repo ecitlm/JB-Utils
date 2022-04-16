@@ -1,10 +1,1 @@
-/**
-* name: jb-utils
-* version 1.1.1
-* description: jb-utils前端常用方法库
-* author: ecitlm
-* website: https://ecitlm.github.io/JB-Utils/index.html
-* Date: 2021-12-21
-**/
-
-!function(e,r){"object"==typeof exports&&"undefined"!=typeof module?module.exports=r():"function"==typeof define&&define.amd?define(r):(e="undefined"!=typeof globalThis?globalThis:e||self).treeToArray=r()}(this,(function(){"use strict";return function e(r,t){var n=[];if(t=t||"children",!Array.isArray(r))throw new Error("arguments must be array");for(var o=0;o<r.length;o++){var i=r[o],f=JSON.parse(JSON.stringify(i));if(delete f[t],n.push(f),i[t]){var a=e(i[t],t);n=n.concat(a)}}return n}}));
+!function(e,n){"object"==typeof exports&&"undefined"!=typeof module?module.exports=n():"function"==typeof define&&define.amd?define(n):(e="undefined"!=typeof globalThis?globalThis:e||self).treeToArray=n()}(this,(function(){"use strict";return function(e,n){var t={},i=[];e.map((function(e){t[e.id]=e}));for(var o=0,r=e.length;o<r;o++){var f=e[o].parentId;f!==n?t[f].children?t[f].children.push(e[o]):t[f].children=[e[o]]:i.push(e[o])}return i}}));
