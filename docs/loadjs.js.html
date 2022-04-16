@@ -3,7 +3,7 @@
 <head>
     
     <meta charset="utf-8">
-    <title>debounce.js - Documentation</title>
+    <title>loadjs.js - Documentation</title>
     
     
     <script src="scripts/prettify/prettify.js"></script>
@@ -32,7 +32,7 @@
 
 <div id="main">
     
-    <h1 class="page-title">debounce.js</h1>
+    <h1 class="page-title">loadjs.js</h1>
     
 
     
@@ -43,22 +43,31 @@
     <section>
         <article>
             <pre class="prettyprint source linenums"><code>/**
- * @description 函数防抖
- * @param fn
- * @param delay 延迟时间 默认500ms
- * @return  {Function} 返回防抖后的函数
+ * 加载JS文件
+ * @param url
+ * @param callback
  */
-const debounce = (fn, delay = 500) => {
-  let timeout = null;
-  return function (...args) {
-    if (timeout) clearTimeout(timeout);
-    timeout = setTimeout(() => {
-      timeout = null;
-      fn.apply(this, args);
-    }, delay);
-  };
+const loadJS = (url, callback = Function) => {
+  let script = document.createElement('script');
+  script.type = 'text/javascript';
+  //IE
+  if (script.readyState) {
+    script.onreadystatechange = function () {
+      if (script.readyState == 'loaded' || script.readyState == 'complete') {
+        script.onreadystatechange = null;
+        callback();
+      }
+    };
+  } else {
+    script.onload = function () {
+      callback();
+    };
+  }
+  script.src = url;
+  document.getElementsByTagName('head')[0].appendChild(script);
 };
-export default debounce;
+
+export default loadJS;
 </code></pre>
         </article>
     </section>
