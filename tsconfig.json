@@ -8,7 +8,9 @@
     "sourceMap": true,
     "outDir": "./dist",
     "allowJs": true,
-    "allowSyntheticDefaultImports": true
+    "allowSyntheticDefaultImports": true,
+    "experimentalDecorators": true,
+    "suppressImplicitAnyIndexErrors": true
   },
   "include": ["./src/*"],
   "exclude": [

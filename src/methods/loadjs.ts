@@ -7,8 +7,8 @@ interface LoadJSFunc {
   (url: string, cb?: Function);
 }
 
-let loadJS: LoadJSFunc;
-loadJS = function (url: string, cb = Function): void {
+let loadjs: LoadJSFunc;
+loadjs = function (url: string, cb = Function): void {
   let script: any = document.createElement('script');
   //IE兼容
   if (script.readyState) {
@@ -24,4 +24,4 @@ loadJS = function (url: string, cb = Function): void {
     };
   }
 };
-export default loadJS;
+export default loadjs;

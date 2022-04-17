@@ -53,6 +53,6 @@ gitHub： https://github.com/ecitlm/JB-Utils
 | Calc                    | 加减乘除类     |
 | unique                  | 数组对象去重    |
 | formatDate              | 时间格式化     |
-| loadJS              | 加載JS文件     |
-| JSONP              | 时间格式化     |
+| loadjs              | 加載JS文件     |
+| jsonp              | 时间格式化     |
 ### change log

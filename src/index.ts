@@ -1,7 +1,7 @@
 import getUID from './methods/getUID';
 import treeToArray from './methods/treeToArray';
-import loadJS from './methods/loadjs';
-import JSONP from './methods/jsonp';
+import loadjs from './methods/loadjs';
+import jsonp from './methods/jsonp';
 import stringifyQueryString from './methods/stringifyQueryString';
 import formatNumber from './methods/formatNumber';
 import parseQueryString from './methods/parseQueryString';
@@ -14,8 +14,8 @@ import Storage from './methods/Storage';
 export {
   getUID,
   treeToArray,
-  loadJS,
-  JSONP,
+  jsonp,
+  loadjs,
   stringifyQueryString,
   parseQueryString,
   formatNumber,
@@ -23,5 +23,5 @@ export {
   IdCardInfo,
   Validator,
   getTreeChildren,
-  Storage
+  Storage,
 };

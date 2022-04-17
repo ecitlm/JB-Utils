@@ -6,5 +6,5 @@
 interface LoadJSFunc {
     (url: string, cb?: Function): any;
 }
-declare let loadJS: LoadJSFunc;
-export default loadJS;
+declare let loadjs: LoadJSFunc;
+export default loadjs;

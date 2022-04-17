@@ -8,7 +8,7 @@ interface jsonpFunc {
   cbName: string;
   params?: params;
 }
-function JSONP(config: jsonpFunc) {
+function jsonp(config: jsonpFunc) {
   const cbName = 'JSONP' + Date.now();
   window[cbName] = function (res) {
     config.success(res);
@@ -34,7 +34,7 @@ function JSONP(config: jsonpFunc) {
     script.parentNode.removeChild(script);
   }, 0);
 }
-export default JSONP;
+export default jsonp;
 /*
 JSONP({
   url: 'xxxx',

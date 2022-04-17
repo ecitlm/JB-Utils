@@ -8,5 +8,5 @@ interface jsonpFunc {
     cbName: string;
     params?: params;
 }
-declare function JSONP(config: jsonpFunc): void;
-export default JSONP;
+declare function jsonp(config: jsonpFunc): void;
+export default jsonp;
