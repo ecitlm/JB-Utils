@@ -3,11 +3,8 @@
  * @return {*}  {string} 返回生成的UID字符串
  * @example createUID() => 5d33b0fc-692d-41eb-e703-4aa76a8f
  */
-interface getUID {
-  (): string;
-}
-let getUID: getUID;
-getUID = () => {
+
+const getUID = (): string => {
   let UID;
   let rule = 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxx';
   UID = rule.replace(/[xy]/g, function (rep) {
@@ -26,3 +23,4 @@ function uuid() {
   return UID;
 }
 */
+getUID();

@@ -4,7 +4,7 @@
  * @param arr
  * @param pId
  */
-const arrayToTree = (arr: Array<any>,pId: string):Array<any> => {
+const arrayToTree = (arr: Array<any>, pId: string | number): Array<any> => {
   let obj = {};
   let tree: Array<any> = [];
   //将数组中数据转为键值对结构 (这里的数组和obj会相互引用)
@@ -24,6 +24,6 @@ const arrayToTree = (arr: Array<any>,pId: string):Array<any> => {
     }
   }
   return tree;
-}
+};
 
 export default arrayToTree;

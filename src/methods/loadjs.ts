@@ -8,7 +8,7 @@ interface LoadJSFunc {
 }
 
 let loadJS: LoadJSFunc;
-loadJS = function(url: string, cb = Function):void {
+loadJS = function (url: string, cb = Function): void {
   let script: any = document.createElement('script');
   //IE兼容
   if (script.readyState) {

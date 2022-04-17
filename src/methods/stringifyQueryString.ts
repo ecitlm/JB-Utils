@@ -9,9 +9,9 @@
  */
 
 type objType = {
-  [propName:string]:any
-}
-const stringifyQueryString = (obj: objType, prefix: string):string => {
+  [propName: string]: any;
+};
+const stringifyQueryString = (obj: objType, prefix: string): string => {
   let pairs = [];
   for (let key in obj) {
     if (!Object.prototype.hasOwnProperty.call(obj, key)) {

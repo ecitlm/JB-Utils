@@ -5,6 +5,11 @@ import JSONP from './methods/jsonp';
 import stringifyQueryString from './methods/stringifyQueryString';
 import formatNumber from './methods/formatNumber';
 import parseQueryString from './methods/parseQueryString';
+import convertCurrency from './methods/convertCurrency';
+import IdCardInfo from './methods/IdCardInfo';
+import Validator from './methods/Validator';
+import getTreeChildren from './methods/getTreeChildren';
+import Storage from './methods/Storage';
 
 export {
   getUID,
@@ -13,5 +18,10 @@ export {
   JSONP,
   stringifyQueryString,
   parseQueryString,
-  formatNumber
+  formatNumber,
+  convertCurrency,
+  IdCardInfo,
+  Validator,
+  getTreeChildren,
+  Storage
 };

@@ -4,5 +4,5 @@
  * @param arr
  * @param pId
  */
-declare const arrayToTree: (arr: Array<any>, pId: string) => Array<any>;
+declare const arrayToTree: (arr: Array<any>, pId: string | number) => Array<any>;
 export default arrayToTree;
