@@ -13,7 +13,7 @@ module.exports = {
     sourceType: 'module'
   },
   rules: {
-    "no-var":'error',
+    'no-var': 'error',
     indent: ['error', 2],
     // 'linebreak-style': ['error', 'windows'],
     quotes: ['error', 'single'],
@@ -21,7 +21,7 @@ module.exports = {
     'array-bracket-spacing': ['error', 'never'],
     'object-curly-spacing': ['error', 'always'],
     'key-spacing': [0, { beforeColon: false, afterColon: true }],
-    'arrow-parens': ['error', 'as-needed'],
+    'arrow-parens': ['error', 'as-needed']
     // 'space-in-brackets': ['error', 'always']
   }
 };

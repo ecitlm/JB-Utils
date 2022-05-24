@@ -4,7 +4,7 @@
  */
 class Calc {
   constructor() {}
-  add(...args) {
+  static add(...args) {
     let sum = 0;
     let tmp = [];
     for (let val of args) {
@@ -25,7 +25,7 @@ class Calc {
    * @description 减法
    * @param args
    */
-  sub(...args) {
+  static sub(...args) {
     let max = 0;
     let count = args[0] | 0;
     for (let i = 0; i < args.length; i++) {
@@ -50,7 +50,7 @@ class Calc {
    * @description 乘法
    * @param args
    */
-  ride(...args) {
+  static ride(...args) {
     const strVal = args[0].toString();
     const strValTwo = args[1].toString();
     const index = strVal.indexOf('.');
@@ -72,7 +72,7 @@ class Calc {
    * @param args
    * @param valTwo
    */
-  exc(args, valTwo = 100) {
+  static exc(args, valTwo = 100) {
     const strVal = args.toString();
     const strValTwo = valTwo.toString();
     const index = strVal.indexOf('.');

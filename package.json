@@ -5,6 +5,7 @@
   "main": "dist/index.cjs.js",
   "module": "dist/index.esm.js",
   "browser": "dist/index.umd.js",
+  "typings": "./index.d.ts",
   "scripts": {
     "build": "rimraf dist && rollup --config rollup.config.js",
     "dev": "rollup --config rollup.config.dev.js",
