@@ -21,6 +21,7 @@ import throttle from './methods/throttle';
 import  unique  from './methods/unique';
 import  formatDate  from './methods/formatDate';
 import { version } from '../package.json';
+import getActualWidthOfChars from './methods/getActualWidthOfChars';
 
 export {
   getTreeChildren,
@@ -39,5 +40,6 @@ export {
   debounce,
   unique,
   formatDate,
+  getActualWidthOfChars,
   version
 };
