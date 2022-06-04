@@ -47,5 +47,6 @@ gitHub： https://github.com/ecitlm/JB-Utils
 | Calc                    | 加减乘除类     |
 | unique                  | 数组对象去重    |
 | formatDate              | 时间格式化     |
-
+| jsonp                  | jsonp请求     |
+| loadjs                  | 加载script     |
 ### change log
