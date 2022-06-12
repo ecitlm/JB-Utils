@@ -49,4 +49,5 @@ gitHub： https://github.com/ecitlm/JB-Utils
 | formatDate              | 时间格式化     |
 | jsonp                  | jsonp请求     |
 | loadjs                  | 加载script     |
+/waterMark                /水印生成/
 ### change log

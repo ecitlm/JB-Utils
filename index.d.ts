@@ -4,7 +4,7 @@
  * @return {string} 大写金额
  * @example convertCurrency(88888.88) => '捌万捌仟捌佰捌拾捌元捌角捌分'
  */
-export declare const convertCurrency: (n: number) => string;
+export declare const convertCurrency: (num: number) => string;
 
 /**
  * @description 函数防抖

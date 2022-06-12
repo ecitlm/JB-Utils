@@ -22,7 +22,9 @@ import  unique  from './methods/unique';
 import  formatDate  from './methods/formatDate';
 import { version } from '../package.json';
 import getActualWidthOfChars from './methods/getActualWidthOfChars';
-
+import jsonp from './methods/jsonp';
+import loadjs from './methods/loadjs';
+import waterMark from './methods/waterMark';
 export {
   getTreeChildren,
   getUID,
@@ -41,5 +43,8 @@ export {
   unique,
   formatDate,
   getActualWidthOfChars,
+  jsonp,
+  loadjs,
+  waterMark,
   version
 };
