@@ -25,6 +25,9 @@ import getActualWidthOfChars from './methods/getActualWidthOfChars';
 import jsonp from './methods/jsonp';
 import loadjs from './methods/loadjs';
 import waterMark from './methods/waterMark';
+import ajax from './methods/ajax';
+import isIdCard from './methods/isIdCard';
+import $$ from './methods/$$';
 export {
   getTreeChildren,
   getUID,
@@ -46,5 +49,8 @@ export {
   jsonp,
   loadjs,
   waterMark,
-  version
+  ajax,
+  version,
+  isIdCard,
+  $$
 };
