@@ -28,6 +28,8 @@ import waterMark from './methods/waterMark';
 import ajax from './methods/ajax';
 import isIdCard from './methods/isIdCard';
 import $$ from './methods/$$';
+import image2Base64 from './methods/image2Base64';
+
 export {
   getTreeChildren,
   getUID,
@@ -52,5 +54,6 @@ export {
   ajax,
   version,
   isIdCard,
-  $$
+  $$,
+  image2Base64
 };
