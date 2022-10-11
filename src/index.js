@@ -29,6 +29,8 @@ import ajax from './methods/ajax';
 import isIdCard from './methods/isIdCard';
 import $$ from './methods/$$';
 import image2Base64 from './methods/image2Base64';
+import deepClone from './methods/deepClone';
+import ridUrlParam from './methods/ridUrlParam';
 
 export {
   getTreeChildren,
@@ -55,5 +57,7 @@ export {
   version,
   isIdCard,
   $$,
-  image2Base64
+  image2Base64,
+  deepClone,
+  ridUrlParam
 };
