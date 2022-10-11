@@ -22,6 +22,15 @@ import  unique  from './methods/unique';
 import  formatDate  from './methods/formatDate';
 import { version } from '../package.json';
 import getActualWidthOfChars from './methods/getActualWidthOfChars';
+import jsonp from './methods/jsonp';
+import loadjs from './methods/loadjs';
+import waterMark from './methods/waterMark';
+import ajax from './methods/ajax';
+import isIdCard from './methods/isIdCard';
+import $$ from './methods/$$';
+import image2Base64 from './methods/image2Base64';
+import deepClone from './methods/deepClone';
+import ridUrlParam from './methods/ridUrlParam';
 
 export {
   getTreeChildren,
@@ -41,5 +50,14 @@ export {
   unique,
   formatDate,
   getActualWidthOfChars,
-  version
+  jsonp,
+  loadjs,
+  waterMark,
+  ajax,
+  version,
+  isIdCard,
+  $$,
+  image2Base64,
+  deepClone,
+  ridUrlParam
 };
